@@ -1,0 +1,8 @@
+fuzzywuzzy==0.18.0
+pandas==1.1.5
+python-Levenshtein==0.20.9
+sentencepiece==0.1.97
+tensorboard==2.10.1
+torch==1.8.1+cu101
+
+-f https://download.pytorch.org/whl/torch_stable.html

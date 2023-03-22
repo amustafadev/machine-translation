@@ -1,0 +1,27 @@
+# vocabulary config
+TOKENIZER_FOLDER = 'tokenizers'
+VOCABULARY_FOLDER = 'vocabularies'
+
+
+# train config
+EXP_NAME = 'test'
+MODEL_NAME = 'e2d1'
+
+LR = 1e-2
+BETAS = [0.9, 0.99]
+
+BATCH_SIZE = 16
+NUM_WORKERS = 8
+
+NUM_EPOCHS = 500
+PRINT_AFTER_BATCHES = 50
+
+SAVE_FOLDER = 'save'
+WEIGHTS_FOLDER = 'weights'
+TENSORBOARD_FOLDER = 'runs'
+
+SAVE_CHECKPOINTS = False
+CHECKPOINT_EPOCHS = 10
+CHECKPOINT_LOSS_CHECK = True
+
+SAVE_BEST_LOSS = True
