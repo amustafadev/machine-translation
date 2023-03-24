@@ -40,7 +40,6 @@ class Transformer(nn.Module):
     # forward
     out = self.transformer(src=x, tgt=y, tgt_mask=mask)
     out = self.linear(out)
-    out = self.softmax(out)
 
     # return
     return out

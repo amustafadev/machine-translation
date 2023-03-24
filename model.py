@@ -38,13 +38,13 @@ class Model(nn.Module):
 
   def forward(self, src, tgt):
     src = self.src_embedder(src)
-    src = self.pos_encoder(src)
-
     tgt = self.tgt_embedder(tgt)
-    tgt = self.pos_encoder(tgt)
 
     src = src.permute(dims=(1, 0, 2))
     tgt = tgt.permute(dims=(1, 0, 2))
+
+    src = self.pos_encoder(src)
+    tgt = self.pos_encoder(tgt)
 
     out = self.transformer(src, tgt)
     return out

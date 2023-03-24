@@ -22,5 +22,5 @@ class PositionalEncoding(nn.Module):
 
   def forward(self, x: torch.Tensor) -> torch.Tensor:
     out = x + self.pe[:x.size(0)]
-    out = self.dropout(x)
+    out = self.dropout(out)
     return out
