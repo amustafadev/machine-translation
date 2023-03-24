@@ -29,7 +29,6 @@ class TranslationDataset(Dataset):
     self.seq_length = seq_length
 
     df = pd.read_csv(csv_path)
-    df = df[:5000]  # manually limit dataset TODO: REMOVE!
 
     src_data = df[src_vocab.model_prefix]
     tgt_data = df[tgt_vocab.model_prefix]
