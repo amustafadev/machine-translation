@@ -100,7 +100,7 @@ class Trainer():
         self.optimizer.step()
 
         # decode
-        truth = decode_batch(batch=src, vocabulary=self.trainloader.dataset.src_vocab)
+        truth = decode_batch(batch=tgt_out, vocabulary=self.trainloader.dataset.tgt_vocab)
         predictions = decode_batch(batch=outputs.argmax(dim=-1).permute(1, 0), vocabulary=self.trainloader.dataset.tgt_vocab)
 
         # Batch accuracy
@@ -153,7 +153,7 @@ class Trainer():
       loss = self.criterion(outputs.permute(1, 2, 0), tgt_out)
 
       # decode
-      truth = decode_batch(batch=src, vocabulary=self.valloader.dataset.src_vocab)
+      truth = decode_batch(batch=tgt_out, vocabulary=self.valloader.dataset.tgt_vocab)
       predictions = decode_batch(batch=outputs.argmax(dim=-1).permute(1, 0), vocabulary=self.valloader.dataset.tgt_vocab)
 
       # Batch accuracy
