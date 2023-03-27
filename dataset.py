@@ -29,6 +29,7 @@ class TranslationDataset(Dataset):
     self.seq_length = seq_length
 
     df = pd.read_csv(csv_path)
+    df = df.sample(frac=1, random_state=None)
 
     src_data = df[src_vocab.model_prefix]
     tgt_data = df[tgt_vocab.model_prefix]

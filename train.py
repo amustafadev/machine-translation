@@ -12,6 +12,7 @@ from dataset import TranslationDataset
 src_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/eng.txt')
 tgt_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/asl.txt')
 
+
 # datasets
 train_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=src_vocab, tgt_vocab=tgt_vocab, seq_length=128)
 val_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=src_vocab, tgt_vocab=tgt_vocab, seq_length=128, train=False)
