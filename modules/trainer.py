@@ -37,12 +37,11 @@ class Trainer():
     # Model
     self.model = model.to(self.device)
 
-    # Save Folder
+    # Save Folders
     now = datetime.now().strftime("%y-%m-%d %H-%M-%S")
     save_folder = f'{config.SAVE_FOLDER}/{config.EXP_NAME}/{config.MODEL_NAME}/{now}'
-
-    # Weights
     self.weights_folder = f'{save_folder}/{config.WEIGHTS_FOLDER}'
+    self.checkpoints_folder = f'{save_folder}/{config.CHECKPOINT_EPOCHS}'
 
     # Tensorboard
     log_dir = f'{save_folder}/{config.TENSORBOARD_FOLDER}'
@@ -193,9 +192,9 @@ class Trainer():
     return val_loss, val_acc
 
   # Function: Save Model
-  def save(self, loss, acc):
+  def save(self, loss, acc, checkpoint=False):
     # Model Save Folder
-    save_folder = f'{self.weights_folder}/best'
+    save_folder = f'{self.checkpoints_folder}/e_{self.cur_epoch + 1}' if checkpoint else f'{self.weights_folder}/best'
     os.makedirs(name=save_folder, exist_ok=True)
 
     # Save Model State
