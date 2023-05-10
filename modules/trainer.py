@@ -183,7 +183,7 @@ class Trainer():
       if config.CHECKPOINT_LOSS_CHECK and (val_loss > self.save_loss):
         pass
       else:
-        self.save(loss=val_loss, acc=val_acc)
+        self.save(loss=val_loss, acc=val_acc, checkpoint=True)
 
     # Reset Mode
     self.model.train()
