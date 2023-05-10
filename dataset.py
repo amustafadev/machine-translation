@@ -51,7 +51,7 @@ class TranslationDataset(Dataset):
 
     tgt_string = self.tgt_data[idx].strip().lower()
     tgt_encoded = self.tgt_vocab.encode_as_ids(sentence=tgt_string)
-    tgt_sequence = tgt_encoded + [self.tgt_vocab.word2id['<PAD>']] * (self.seq_length - len(tgt_encoded) - 1)
+    tgt_sequence = tgt_encoded + [self.tgt_vocab.word2id['<PAD>']] * (self.seq_length - len(tgt_encoded) - 2)
     tgt_tensor = torch.LongTensor(tgt_sequence)
 
     return src_tensor, tgt_tensor
