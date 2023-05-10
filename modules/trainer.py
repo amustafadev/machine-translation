@@ -39,7 +39,7 @@ class Trainer():
 
     # Save Folders
     now = datetime.now().strftime("%y-%m-%d %H-%M-%S")
-    save_folder = f'{config.SAVE_FOLDER}/{config.EXP_NAME}/{config.MODEL_NAME}/{now}'
+    save_folder = f'{config.SAVE_FOLDER}/{config.MODEL_NAME}/{config.EXP_NAME}/{now}'
     self.weights_folder = f'{save_folder}/{config.WEIGHTS_FOLDER}'
     self.checkpoints_folder = f'{save_folder}/{config.CHECKPOINT_EPOCHS}'
 
