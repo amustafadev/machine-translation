@@ -30,7 +30,7 @@ model = Model(
 
 
 # optimizer
-optimizer = torch.optim.Adam(params=model.parameters(), lr=config.LR, betas=config.BETAS)
+optimizer = torch.optim.Adam(params=model.parameters(), lr=config.LR, betas=config.BETAS, weight_decay=config.DECAY)
 
 
 # loss
