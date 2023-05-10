@@ -34,7 +34,7 @@ optimizer = torch.optim.Adam(params=model.parameters(), lr=config.LR, betas=conf
 
 
 # loss
-criterion = torch.nn.CrossEntropyLoss(ignore_index=0)
+criterion = torch.nn.CrossEntropyLoss(ignore_index=tgt_vocab.tokenizer.pad_id())
 
 
 # training
