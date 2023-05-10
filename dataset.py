@@ -15,7 +15,7 @@ class TranslationDataset(Dataset):
       tgt_vocab: Vocabulary,
       seq_length: int,
       train: bool = True,
-      val_split: float = 0.1
+      val_split: float = config.VAL_SPLIT
   ) -> None:
 
     src_vocab.tokenizer._add_bos = True

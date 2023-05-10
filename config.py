@@ -5,6 +5,7 @@ VOCABULARY_FOLDER = 'vocabularies'
 
 # dataset config
 SEQ_LEN = 128
+VAL_SPLIT = 0.1
 
 
 # model config
@@ -18,7 +19,7 @@ NUM_DECODERS = 1
 EXP_NAME = 'test'
 MODEL_NAME = f'e{NUM_ENCODERS}d{NUM_DECODERS}h{NUM_HEADS}v{DIM}'
 
-LR = 3e-4
+LR = 1e-2
 BETAS = [0.9, 0.99]
 
 BATCH_SIZE = 32
