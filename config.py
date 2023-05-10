@@ -3,6 +3,10 @@ TOKENIZER_FOLDER = 'tokenizers'
 VOCABULARY_FOLDER = 'vocabularies'
 
 
+# dataset config
+SEQ_LEN = 128
+
+
 # model config
 DIM = 128
 NUM_HEADS = 2

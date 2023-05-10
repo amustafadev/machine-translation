@@ -14,8 +14,8 @@ tgt_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/asl.txt')
 
 
 # datasets
-train_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=src_vocab, tgt_vocab=tgt_vocab, seq_length=128)
-val_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=src_vocab, tgt_vocab=tgt_vocab, seq_length=128, train=False)
+train_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=src_vocab, tgt_vocab=tgt_vocab, seq_length=config.SEQ_LEN)
+val_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=src_vocab, tgt_vocab=tgt_vocab, seq_length=config.SEQ_LEN, train=False)
 
 
 # model
