@@ -1,5 +1,6 @@
 # imports
 import torch
+from adabelief_pytorch import AdaBelief
 
 import config
 from model import Model
@@ -30,7 +31,7 @@ model = Model(
 
 
 # optimizer
-optimizer = torch.optim.Adam(params=model.parameters(), lr=config.LR, betas=config.BETAS, weight_decay=config.DECAY)
+optimizer = AdaBelief(params=model.parameters(), lr=config.LR, betas=config.BETAS, weight_decay=config.DECAY, print_change_log=False)
 
 
 # loss
