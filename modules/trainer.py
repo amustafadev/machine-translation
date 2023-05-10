@@ -117,6 +117,7 @@ class Trainer():
           print(f'Epoch: {epoch + 1}/{config.NUM_EPOCHS}\t Batch: {batch_idx + 1:5d} | Loss: {train_loss:.3f}\t Accuracy: {train_acc:.3f}')
 
       # Update Tensorbaord
+      self.tensorboard.add_scalar(tag='train/acc', value=train_acc)
       self.tensorboard.add_scalar(tag='train/loss', value=train_loss)
       self.tensorboard.add_text(tag='train/output', text=process_text_for_tensorboard(truth=truth, predictions=predictions))
 
@@ -170,8 +171,8 @@ class Trainer():
     self.best_acc = np.max([val_acc, self.best_acc])
 
     # Update Tensorboard
-    self.tensorboard.add_scalar(tag='val/loss', value=val_loss)
     self.tensorboard.add_scalar(tag='val/acc', value=val_acc)
+    self.tensorboard.add_scalar(tag='val/loss', value=val_loss)
     self.tensorboard.add_text(tag='val/output', text=process_text_for_tensorboard(truth=truth, predictions=predictions))
 
     # Save Best Loss
