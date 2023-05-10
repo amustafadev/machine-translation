@@ -21,10 +21,10 @@ val_dataset = TranslationDataset(csv_path='./datasets/eng_asl.csv', src_vocab=sr
 # model
 model = Model(
     num_classes=len(tgt_vocab),
-    d_model=512,
-    nhead=8,
-    num_encoder_layers=2,
-    num_decoder_layers=1,
+    d_model=config.DIM,
+    nhead=config.NUM_HEADS,
+    num_encoder_layers=config.NUM_ENCODERS,
+    num_decoder_layers=config.NUM_DECODERS,
     num_src_embeddings=len(src_vocab)
 )
 
