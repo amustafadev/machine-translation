@@ -1,9 +1,9 @@
 adabelief-pytorch==0.2.1
 fuzzywuzzy==0.18.0
-pandas==1.1.5
-python-Levenshtein==0.20.9
-sentencepiece==0.1.97
-tensorboard==2.10.1
+pandas==2.0.1
+python-Levenshtein==0.21.0
+sentencepiece==0.1.99
+tensorboard==2.13.0
 torch==1.8.1+cu101
 
 -f https://download.pytorch.org/whl/torch_stable.html
