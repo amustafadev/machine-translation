@@ -8,6 +8,7 @@ VOCABULARY_FOLDER = 'vocabularies'
 # dataset config
 SEQ_LEN = 128
 VAL_SPLIT = 0.1
+DATASET_PATH = './datasets/eng_asl.csv'
 
 
 # model config
