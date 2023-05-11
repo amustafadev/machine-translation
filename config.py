@@ -1,4 +1,6 @@
 # vocabulary config
+SRC_VOCAB_PREFIX = 'eng'
+TGT_VOCAB_PREFIX = 'asl'
 TOKENIZER_FOLDER = 'tokenizers'
 VOCABULARY_FOLDER = 'vocabularies'
 

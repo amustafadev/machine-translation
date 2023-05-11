@@ -10,8 +10,8 @@ from dataset import TranslationDataset
 
 
 # vocabularies
-src_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/eng.txt')
-tgt_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/asl.txt')
+src_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/{config.SRC_VOCAB_PREFIX}.txt')
+tgt_vocab = Vocabulary(data_path=f'{config.VOCABULARY_FOLDER}/{config.TGT_VOCAB_PREFIX}.txt')
 
 
 # datasets
