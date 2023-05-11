@@ -22,7 +22,9 @@ NUM_DECODERS = 1
 EXP_NAME = 'test'
 MODEL_NAME = f'e{NUM_ENCODERS}d{NUM_DECODERS}h{NUM_HEADS}v{DIM}'
 
-LR = 1e-2
+WEIGHTS_PATH = f'save/e1d1h2v128/mini/23-05-11 19-44-32/weights/best/model_state.pt'
+
+LR = 1e-5
 BETAS = [0.9, 0.99]
 DECAY = 0
 

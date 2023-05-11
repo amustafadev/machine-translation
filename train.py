@@ -30,6 +30,12 @@ model = Model(
 )
 
 
+# load weights
+if config.WEIGHTS_PATH:
+  model_state_dict = torch.load(f=config.WEIGHTS_PATH)
+  model.load_state_dict(state_dict=model_state_dict)
+
+
 # optimizer
 optimizer = AdaBelief(params=model.parameters(), lr=config.LR, betas=config.BETAS, weight_decay=config.DECAY, print_change_log=False)
 
